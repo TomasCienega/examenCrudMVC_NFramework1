@@ -64,13 +64,12 @@ namespace examenCrudMVC_NFramework1.Controllers
 
                 _db.Empleados.Add(vm.EmpleadoModelReference);
                 await _db.SaveChangesAsync();
-                return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                return RedirectToAction("Index");
             }
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
